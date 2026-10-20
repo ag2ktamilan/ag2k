@@ -63,7 +63,7 @@ function Nav() {
         <ul className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="text-sm text-muted-foreground transition hover:text-foreground">{n}</a></li>)}
         </ul>
-        <SubBtn className="hidden !px-5 !py-2 text-sm lg:inline-flex" />
+        <div className="hidden lg:block"><SubBtn className="!px-5 !py-2 text-sm" /></div>
         <button className="lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
         </button>
@@ -306,8 +306,26 @@ function Contact() {
       <H2 kicker="Collab">LET'S CREATE SOMETHING AMAZING</H2>
       <Reveal>
         <p className="mb-8 text-center text-muted-foreground">Have an idea for a collaboration, gaming project, or creator partnership? Get in touch.</p>
-        {BUSINESS_EMAIL && <p className="mb-8 text-center"><a href={`mailto:${BUSINESS_EMAIL}`} className="inline-flex items-center gap-2 text-secondary"><Mail className="h-4 w-4" />{BUSINESS_EMAIL}</a></p>}
-        <form onSubmit={submit} noValidate className="glass grid gap-4 rounded-3xl p-8 sm:grid-cols-2">
+        <div className="mb-8 grid gap-4 sm:grid-cols-2">
+          <div className="glass rounded-2xl p-6">
+            <Mail className="h-8 w-8 text-primary" />
+            <h3 className="mt-3 text-lg font-bold">For brands & sponsors</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Sponsorships, collabs and gaming projects.</p>
+            {BUSINESS_EMAIL
+              ? <a href={`mailto:${BUSINESS_EMAIL}`} className="mt-4 inline-flex break-all font-bold text-secondary">{BUSINESS_EMAIL}</a>
+              : <a href="#inquiry" className="mt-4 inline-flex font-bold text-secondary">Send an inquiry below →</a>}
+          </div>
+          <div className="glass rounded-2xl p-6">
+            <MessageCircle className="h-8 w-8 text-secondary" />
+            <h3 className="mt-3 text-lg font-bold">For fans</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Say hi in the comments or join a live stream.</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a href={CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-secondary"><Youtube className="h-4 w-4" /> YouTube</a>
+              {DISCORD_URL && <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" className="font-bold text-secondary">Discord</a>}
+            </div>
+          </div>
+        </div>
+        <form id="inquiry" onSubmit={submit} noValidate className="glass grid gap-4 rounded-3xl p-8 sm:grid-cols-2">
           <label className="grid gap-2 text-sm">Name<input name="name" maxLength={100} className={input} /></label>
           <label className="grid gap-2 text-sm">Email<input name="email" type="email" maxLength={255} className={input} /></label>
           <label className="grid gap-2 text-sm sm:col-span-2">Subject<input name="subject" maxLength={150} className={input} /></label>
