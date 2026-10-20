@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Menu, X, Play, Youtube, Gamepad2, Radio, Smile, Users, Sparkles, Trophy, Mail, MessageCircle, ChevronDown, Eye, Calendar } from "lucide-react";
+import logo from "@/assets/ag2k-logo.png.asset.json";
 import { ABOUT, BUSINESS_EMAIL, CHANNEL_URL, DISCORD_URL, SUBSCRIBE_URL, VIDEOS, search, type Video } from "@/lib/channel";
 
 export const Route = createFileRoute("/")({
@@ -59,7 +60,7 @@ function Nav() {
   return (
     <header className={`fixed inset-x-0 top-0 z-40 transition-colors ${scrolled || open ? "bg-background/90 backdrop-blur-lg border-b border-border" : ""}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4" aria-label="Main">
-        <a href="#home" className="font-display text-lg font-black tracking-wider">AG2K<span className="text-neon">_TAMILAN</span></a>
+        <a href="#home" className="flex items-center gap-2 font-display text-lg font-black tracking-wider"><img src={logo.url} alt="" className="h-9 w-9 shrink-0 rounded-full" />AG2K<span className="text-neon">_TAMILAN</span></a>
         <ul className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="text-sm text-muted-foreground transition hover:text-foreground">{n}</a></li>)}
         </ul>
@@ -105,10 +106,7 @@ function Hero() {
           <div className="relative grid h-72 w-72 place-items-center sm:h-96 sm:w-96">
             <div className="absolute inset-0 rounded-[2.5rem] bg-neon opacity-80 blur-2xl" />
             <div className="glass relative grid h-full w-full place-items-center rounded-[2.5rem] border-2 border-primary/50">
-              <div className="text-center">
-                <Gamepad2 className="mx-auto h-24 w-24 text-secondary animate-floaty" />
-                <p className="mt-4 font-display text-4xl font-black text-neon">AG2K</p>
-              </div>
+              <img src={logo.url} alt="AG2K_TAMILAN logo" className="h-[85%] w-[85%] rounded-full object-cover animate-floaty" />
             </div>
           </div>
         </Reveal>
@@ -130,7 +128,7 @@ function About() {
         <Reveal>
           <div className="glass relative grid aspect-square place-items-center overflow-hidden rounded-3xl">
             <div className="absolute inset-0 bg-neon opacity-20" />
-            <p className="relative font-display text-6xl font-black text-neon">AG2K</p>
+            <img src={logo.url} alt="AG2K_TAMILAN" loading="lazy" className="relative h-3/4 w-3/4 rounded-full object-cover shadow-glow" />
           </div>
         </Reveal>
         <Reveal>
