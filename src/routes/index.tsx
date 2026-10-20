@@ -172,7 +172,9 @@ function Nav() {
           {open ? <X /> : <Menu />}
         </button>
       </nav>
-      <div className={`overflow-hidden transition-all lg:hidden ${open ? "max-h-[480px]" : "max-h-0"}`}>
+      <div
+        className={`overflow-hidden transition-all lg:hidden ${open ? "max-h-[480px]" : "max-h-0"}`}
+      >
         <ul className="flex flex-col gap-1 px-5 pb-6">
           {NAV.map((n) => (
             <li key={n}>
@@ -208,7 +210,10 @@ function Hero({ stats }: { stats: ChannelStats }) {
   const subPct = Math.min(100, Math.round((stats.subscriberCount / goalTarget) * 100));
 
   return (
-    <section id="home" className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-28 pb-16">
+    <section
+      id="home"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-28 pb-16"
+    >
       <div className="pointer-events-none absolute inset-0">
         <div className="animate-drift absolute -left-32 top-20 h-[28rem] w-[28rem] rounded-full bg-primary/30 blur-[120px]" />
         <div
@@ -285,7 +290,9 @@ function Hero({ stats }: { stats: ChannelStats }) {
               </p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-widest text-secondary">Total Channel Views</p>
+              <p className="text-xs uppercase tracking-widest text-secondary">
+                Total Channel Views
+              </p>
               <p className="mt-1 font-display text-3xl font-black tabular-nums">
                 {stats.viewCount.toLocaleString("en-IN")}
               </p>
@@ -362,9 +369,9 @@ function About({ stats }: { stats: ChannelStats }) {
         <Reveal>
           <p className="text-lg leading-relaxed text-muted-foreground">
             Hey! I'm <span className="font-bold text-foreground">AG2K_TAMILAN</span>, a Tamil
-            content creator sharing my passion for gaming, entertainment, and creative content.
-            From survival challenges on Priyo SMP & Donut SMP to high-energy Super Sus viewer
-            lobbies, every stream is built around community fun.
+            content creator sharing my passion for gaming, entertainment, and creative content. From
+            survival challenges on Priyo SMP & Donut SMP to high-energy Super Sus viewer lobbies,
+            every stream is built around community fun.
           </p>
           <dl className="mt-8 grid gap-3 sm:grid-cols-2">
             {rows

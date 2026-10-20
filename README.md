@@ -26,6 +26,7 @@ Create a dark, cinematic gaming-inspired design with premium visuals.
 Create a sticky, transparent navigation bar that becomes darker when scrolling.
 
 Include:
+
 - AG2K_TAMILAN logo or custom text-based brand mark.
 - Home
 - About
@@ -48,18 +49,20 @@ Creator name:
 **AG2K_TAMILAN**
 
 Tagline:
-*Gaming. Creativity. Tamil Passion.*
+_Gaming. Creativity. Tamil Passion._
 
 Supporting text:
 “Explore my gaming journey, latest videos, memorable moments, and everything happening on my creator journey.”
 
 Buttons:
+
 - WATCH MY VIDEOS
 - SUBSCRIBE ON YOUTUBE
 
 Link the buttons to the creator's actual YouTube channel and video section.
 
 Visual elements:
+
 - Large creator-name typography.
 - Gaming-inspired abstract background with purple and blue lighting.
 - A prominent creator avatar or character image, if provided.
@@ -79,6 +82,7 @@ Suggested introductory copy:
 “Hey! I'm AG2K_TAMILAN, a Tamil content creator sharing my passion for gaming, entertainment, and creative content. This is my official space to showcase my videos, connect with my community, and document my journey as a creator.”
 
 Include editable information fields for:
+
 - Creator name
 - Channel name
 - Main content category
@@ -96,6 +100,7 @@ Heading: **LATEST VIDEOS**
 Create a responsive grid of cinematic YouTube video cards.
 
 Each card should include:
+
 - Actual YouTube thumbnail.
 - Video title.
 - Upload date, if available.
@@ -104,6 +109,7 @@ Each card should include:
 - Hover animation with a slight zoom.
 
 Requirements:
+
 - Use real videos from https://www.youtube.com/@AG2K_TAMILAN.
 - Prefer the official YouTube Data API or a reliable, permitted video embed method.
 - If live integration is unavailable, provide an editable list of YouTube video IDs.
@@ -134,6 +140,7 @@ Heading: **WHAT YOU'LL FIND HERE**
 Create visually distinctive cards for the creator's actual content categories.
 
 Possible categories, to be customized after checking the channel:
+
 - Gaming
 - Minecraft
 - Gameplay Highlights
@@ -152,6 +159,7 @@ Supporting text:
 “Be part of the journey. Watch the videos, share your thoughts, and stay connected for upcoming content.”
 
 Include:
+
 - Subscribe on YouTube button.
 - Optional Discord community link.
 - Other verified social media links.
@@ -167,6 +175,7 @@ Heading: **EVERY STEP COUNTS**
 Create a horizontal timeline or animated milestone cards.
 
 Possible entries:
+
 - Channel launch
 - First memorable upload
 - Subscriber milestones
@@ -183,6 +192,7 @@ Supporting text:
 “Have an idea for a collaboration, gaming project, or creator partnership? Get in touch.”
 
 Include:
+
 - Collaboration inquiry button.
 - Business email field, configurable by the creator.
 - Optional contact form with name, email, subject, and message.
@@ -195,6 +205,7 @@ Do not invent an email address.
 ## 11. Footer
 
 Create a minimal, polished footer containing:
+
 - AG2K_TAMILAN branding.
 - Quick navigation links.
 - YouTube channel link.
@@ -207,6 +218,7 @@ Add a floating YouTube subscribe icon where appropriate without covering importa
 ## 12. Technical Requirements
 
 Preferred stack:
+
 - React with TypeScript.
 - Tailwind CSS.
 - Framer Motion for animations.
@@ -214,6 +226,7 @@ Preferred stack:
 - Firebase only if a database, admin dashboard, or dynamic content management is genuinely required.
 
 Requirements:
+
 - Reusable, clean components.
 - Responsive layouts.
 - Fast loading and optimized images.
